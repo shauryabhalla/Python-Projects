@@ -1,8 +1,11 @@
 lis = [7,15,6,8,90,56]
 
-for i in range(len(lis)):
-    for j in range(0,len(lis)-i-1):
-        if lis[j]>lis[j+1]:
-            lis[j+1],lis[j]=lis[j],lis[j+1]
+def bubble_sort(list_name):
+    for i in range(len(list_name)):
+        for j in range(0,len(list_name)-i-1):
+            if list_name[j]>list_name[j+1]:
+                list_name[j+1],list_name[j]=list_name[j],list_name[j+1]
 
-print(lis)
+    return list_name
+
+print(bubble_sort(lis))
